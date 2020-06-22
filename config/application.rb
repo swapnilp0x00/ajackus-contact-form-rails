@@ -31,5 +31,9 @@ module ContactForm2
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    I18n.available_locales = [:de, :en]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.yml')]
+    config.i18n.default_locale = :de
   end
 end
