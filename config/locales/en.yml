@@ -36,3 +36,6 @@ en:
   phone: "Phone"
   email: "Email"
   message: "Message"
+  submit: "Submit"
+  back: "Back"
+  header: "Send us a message"

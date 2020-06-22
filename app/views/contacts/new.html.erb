@@ -1,5 +1,11 @@
-<h1>Send us a message</h1>
+<div style="float: right;">
+  <%= form_tag contacts_path, method: 'GET' do%>
+    <%= select_tag 'locale', options_for_select(@supported_languages.collect{ |u| [u, u] }, I18n.locale), onchange: 'this.form.submit();' %>
+  <%end%>
+</div>
+
+<h1> <%= t :header %></h1>
 
 <%= render 'form', contact: @contact %>
 
-<%= link_to 'Back', contacts_path %>
+<%= link_to  t('back'), contacts_path %>

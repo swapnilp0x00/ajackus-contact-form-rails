@@ -1,49 +1,48 @@
 <%# Language Selector %>
-<%= form_tag contacts_path, method: 'GET' do%>
-  <%= select_tag 'locale', options_for_select(@supported_languages.collect{ |u| [u, u] }, I18n.locale), onchange: 'this.form.submit();' %>
-<%end%>
 
 
 <%# Form %>
-<%= form_with(model: contact, local: true) do |form| %>
-  <% if contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+<div style="margin: 10%">
+  <%= form_with(model: contact, local: true) do |form| %>
+    <% if contact.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
 
-      <ul>
-        <% contact.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% contact.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label t :first_name %>
+      <%= form.text_field :first_name %>
+    </div>
+
+    <div class="field">
+      <%= form.label t :last_name %>
+      <%= form.text_field :last_name %>
+    </div>
+
+    <div class="field">
+      <%= form.label t :email %>
+      <%= form.text_field :email %>
+    </div>
+
+    <div class="field">
+      <%= form.label t :phone %>
+      <%= form.text_field :phone %>
+    </div>
+
+    <div class="field">
+      <%= form.label t :message %>
+      <%= form.text_field :message %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit t :submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label t :first_name %>
-    <%= form.text_field :first_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label t :last_name %>
-    <%= form.text_field :last_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label t :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label t :phone %>
-    <%= form.text_field :phone %>
-  </div>
-
-  <div class="field">
-    <%= form.label t :message %>
-    <%= form.text_field :message %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit "Create" %>
-  </div>
-<% end %>
+</div>
