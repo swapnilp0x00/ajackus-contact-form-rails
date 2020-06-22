@@ -44,3 +44,5 @@ This is a simple "contact me" service.
 * 4. Run migrations using ```rake db:migrate```
 
 * 5. Run server using ``rails s``
+
+* 6. Visit ```localhost:3000```
