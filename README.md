@@ -20,9 +20,9 @@ This is a simple "contact me" service.
 
 # Requirements
 
-* Ruby 2.6.5
+* Ruby 2.6.*
 
-* Rails 6
+* Rails 6+
 
 
 
