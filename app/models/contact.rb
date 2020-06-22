@@ -11,6 +11,7 @@ class Contact < ApplicationRecord
     validates :phone,
         numericality: true,
         allow_nil: true,
+        allow_blank: true,
         length: { :minimum => 10, :maximum => 15 }
 
 

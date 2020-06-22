@@ -34,6 +34,6 @@ module ContactForm2
 
     I18n.available_locales = [:de, :en]
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.yml')]
-    config.i18n.default_locale = :de
+    config.i18n.default_locale = :en
   end
 end
