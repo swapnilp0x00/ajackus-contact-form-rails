@@ -1,6 +1,6 @@
 <%# Language Selector %>
 <%= form_tag contacts_path, method: 'GET' do%>
-  <%= select_tag 'locale', options_for_select(@languages.collect{ |u| [u, u] }, I18n.locale), onchange: 'this.form.submit();' %>
+  <%= select_tag 'locale', options_for_select(@supported_languages.collect{ |u| [u, u] }, I18n.locale), onchange: 'this.form.submit();' %>
 <%end%>
 
 
