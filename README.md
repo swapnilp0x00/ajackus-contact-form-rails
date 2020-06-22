@@ -37,7 +37,7 @@ This is a simple "contact me" service.
 
 * 2. Run ```bundle install```
 
-* 3. Setup database using  ```rake db:create```
+* 3. Setup database using  ```rake db:setup```
 
 * 4. Run migrations using ```rake db:migrate```
 
