@@ -1,25 +1,44 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple "contact me" service.
 
-Things you may want to cover:
+* Created Rails application without test suit, without active_storage and action_cable.
 
-* Ruby version
+* Added "contact" model with first name, last name, email, phone and message.
 
-* System dependencies
+* Added routes to GET contact to render form and POST contact to store contact into database.
 
-* Configuration
+* Added Rspec and Written test cases for contact model.
 
-* Database creation
+* Added Mailer and integration of Mailgun.
 
-* Database initialization
+* When entry is created in database, email is send to ```info@ajackus.com```.
 
-* How to run the test suite
+* In order to check your mails and find a confirmation mail send by mailgun to confirm recieving mails by clicking on ```I Agree``` button. You will not recieve emails until you accept the confirmation.
 
-* Services (job queues, cache servers, search engines, etc.)
+* Added language support for two languages English and German
 
-* Deployment instructions
+# Requirements
 
-* ...
-# ajackus-contact-form-rails
+* Ruby 2.6.5
+
+* Rails 6
+
+
+
+# How run test cases
+
+```rspec spec/```
+
+# Steps to run project
+
+* 1. Clone repo into your local machine using.
+```git clone <Repo URL>```
+
+* 2. Run ```bundle install```
+
+* 3. Setup database using  ```rake db:create```
+
+* 4. Run migrations using ```rake db:migrate```
+
+* 5. Run server using ``rails s``
