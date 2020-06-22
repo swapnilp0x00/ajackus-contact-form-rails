@@ -10,6 +10,8 @@ This is a simple "contact me" service.
 
 * Added Rspec and Written test cases for contact model.
 
+* Added simplecov for finding test case coverage.
+
 * Added Mailer and integration of Mailgun.
 
 * When entry is created in database, email is send to ```info@ajackus.com```.

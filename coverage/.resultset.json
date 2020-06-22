@@ -31,6 +31,7 @@
           null,
           null,
           null,
+          null,
           1,
           2,
           2,
@@ -67,19 +68,35 @@
       },
       "/Users/swapnil/Desktop/ROR/contact-form-2/app/jobs/application_job.rb": {
         "lines": [
+          0,
           null,
           null,
           null,
           null,
           null,
-          null,
-          null
+          0
         ],
         "branches": {
         }
       },
       "/Users/swapnil/Desktop/ROR/contact-form-2/app/controllers/application_controller.rb": {
         "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0
         ],
@@ -89,18 +106,15 @@
       "/Users/swapnil/Desktop/ROR/contact-form-2/app/controllers/contacts_controller.rb": {
         "lines": [
           0,
-          0,
           null,
           null,
           0,
           0,
           0,
-          0,
           null,
           null,
           0,
           0,
-          null,
           0,
           0,
           0,
@@ -118,15 +132,6 @@
           null,
           null,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           null,
           0,
           0,
@@ -137,6 +142,6 @@
         }
       }
     },
-    "timestamp": 1592854405
+    "timestamp": 1592858721
   }
 }
