@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   # before_action :set_contact, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_locale, only: [:new]
   # GET /contacts
   # GET /contacts.json
   # def index
@@ -14,6 +14,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts/new
   def new
+    @languages = I18n.available_locales
     @contact = Contact.new
   end
 
@@ -67,6 +68,15 @@ class ContactsController < ApplicationController
     #   @contact = Contact.find(params[:id])
     # end
 
+    def set_locale
+      query_locale = params[:locale]
+      valid_locale = I18n.available_locales.map(&:to_s).include?(query_locale)
+      if valid_locale
+        I18n.locale = query_locale
+      else
+        I18n.locale = I18n.default_locale
+      end
+    end
     # Only allow a list of trusted parameters through.
     def contact_params
       params.require(:contact).permit(:first_name, :last_name, :email, :phone, :message)
