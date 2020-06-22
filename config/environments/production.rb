@@ -101,4 +101,15 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "sandbox85af9215f73e40bf852d86b5860e3dd5.mailgun.org",
+    :user_name => "postmaster@sandbox85af9215f73e40bf852d86b5860e3dd5.mailgun.org",
+    :password => "a95d813ccd541039580ac642ec90e79b-468bde97-1c8f99d7"
+  }
 end
