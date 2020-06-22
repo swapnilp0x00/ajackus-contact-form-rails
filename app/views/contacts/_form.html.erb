@@ -15,20 +15,23 @@
         </ul>
       </div>
     <% end %>
-
+    
     <div class="field">
       <%= form.label t :first_name %>
       <%= form.text_field :first_name %>
+      <span style="color: red;">*</span>
     </div>
 
     <div class="field">
       <%= form.label t :last_name %>
       <%= form.text_field :last_name %>
+      <span style="color: red;">*</span>
     </div>
 
     <div class="field">
       <%= form.label t :email %>
       <%= form.text_field :email %>
+      <span style="color: red;">*</span>
     </div>
 
     <div class="field">
@@ -39,6 +42,7 @@
     <div class="field">
       <%= form.label t :message %>
       <%= form.text_field :message %>
+      <span style="color: red;">*</span>
     </div>
 
     <div class="actions">
