@@ -1,7 +1,7 @@
 de:
   hello: "Hello world D"
-  first_name: "First Name"
-  last_name: "Last Name"
-  phone: "Phone"
+  first_name: "Vorname"
+  last_name: "Nachname"
+  phone: "Telefon"
   email: "Email"
-  message: "Message"
+  message: "Botschaft"
