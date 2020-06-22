@@ -1,4 +1,4 @@
-# README
+# Contact us form service
 
 This is a simple "contact me" service.
 
