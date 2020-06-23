@@ -16,7 +16,7 @@ This is a simple "contact me" service.
 
 * When entry is created in database, email is send to ```info@ajackus.com```.
 
-* check your mail ```infor@ajackus.com``` and find a confirmation mail send by mailgun to confirm recieving mails by clicking on ```I Agree``` button. You will not recieve emails until you accept the confirmation.
+* check your mail ```info@ajackus.com``` and find a confirmation mail send by mailgun to confirm recieving mails by clicking on ```I Agree``` button. You will not recieve emails until you accept the confirmation.
 
 * Added language support for two languages English and German
 
