@@ -1,8 +1,7 @@
-<div class="pull-right">
-  <%= select_tag 'locale',
-    options_for_select(@supported_languages.collect{ |u| [u, u] }, I18n.locale),
-    class: "language_selector"
-  %>
+<div id="language_selector" class="pull-right">
+  <% @supported_languages.each do |code|%>
+    <%= link_to code, "/contacts?locale=#{code}", class: code == I18n.locale ? 'active': '' %> |
+  <%end%>
 </div>
 
 <h1> <%= t('form.header') %></h1>

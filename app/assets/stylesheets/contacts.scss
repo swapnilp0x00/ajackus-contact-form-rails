@@ -19,3 +19,24 @@
     height: 50px;
     text-align: "center";
 }
+a{
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+        background-color: unset !important;
+    }
+    &:visited {
+        text-decoration: none;
+        color: grey !important;
+    }
+    color: grey;
+    &.active {
+        border-bottom: 2px solid black;
+        color: black !important;
+    }
+}
+
+
+#language_selector{ 
+    font-size: 30px;
+}
