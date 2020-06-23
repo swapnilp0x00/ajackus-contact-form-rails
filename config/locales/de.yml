@@ -1,10 +1,24 @@
 de:
-  hello: "Hello world D"
-  first_name: "Vorname"
-  last_name: "Nachname"
-  phone: "Telefon"
-  email: "Email"
-  message: "Botschaft"
-  submit: "Einreichen"
-  back: "Zurück"
-  header: "Schick uns eine Nachricht"
+  form:
+    header: "Schick uns eine Nachricht"
+    submit: "Einreichen"
+    back: "Zurück"
+    field_labels:  
+      first_name: "Vorname"
+      last_name: "Nachname"
+      phone: "Telefon"
+      email: "Email"
+      message: "Botschaft"
+      form_header: "Schick uns eine Nachricht"
+    field_placeholders:
+      first_name: "Alex"
+      last_name: "Stouse"
+      phone: "90263777282"
+      email: "alex.s@gmail.com"
+      message: "Hallo, ich bin interessiert"
+  notice:
+    success: "Kontakt wurde erfolgreich erstellt."
+
+
+
+

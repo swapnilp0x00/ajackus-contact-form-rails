@@ -2,7 +2,7 @@
 
 
 <%# Form %>
-<div style="margin: 10%">
+<div class="m-10-per">
   <%= form_with(model: contact, local: true) do |form| %>
     <% if contact.errors.any? %>
       <div id="error_explanation">
@@ -17,36 +17,36 @@
     <% end %>
     
     <div class="field">
-      <%= form.label t :first_name %>
-      <%= form.text_field :first_name %>
-      <span style="color: red;">*</span>
+      <%= form.label t('form.field_labels.first_name') %>
+      <%= form.text_field :first_name, placeholder: t('form.field_placeholders.first_name') %>
+      <span class="required">*</span>
     </div>
 
     <div class="field">
-      <%= form.label t :last_name %>
-      <%= form.text_field :last_name %>
-      <span style="color: red;">*</span>
+      <%= form.label t('form.field_labels.last_name') %>
+      <%= form.text_field :last_name, placeholder: t('form.field_placeholders.last_name') %>
+      <span class="required" >*</span>
     </div>
 
     <div class="field">
-      <%= form.label t :email %>
-      <%= form.text_field :email %>
-      <span style="color: red;">*</span>
+      <%= form.label t('form.field_labels.email') %>
+      <%= form.text_field :email, placeholder: t('form.field_placeholders.email') %>
+      <span class="required">*</span>
     </div>
 
     <div class="field">
-      <%= form.label t :phone %>
-      <%= form.text_field :phone %>
+      <%= form.label t('form.field_labels.phone') %>
+      <%= form.text_field :phone, placeholder: t('form.field_placeholders.phone') %>
     </div>
 
     <div class="field">
-      <%= form.label t :message %>
-      <%= form.text_area :message, cols: 30, rows: 10  %>
-      <span style="color: red;">*</span>
+      <%= form.label t('form.field_labels.message') %>
+      <%= form.text_area :message, cols: 30, rows: 10, placeholder: t('form.field_placeholders.message')  %>
+      <span class="required">*</span>
     </div>
 
     <div class="actions">
-      <%= form.submit t :submit %>
+      <%= form.submit t('form.submit') %>
     </div>
   <% end %>
 </div>

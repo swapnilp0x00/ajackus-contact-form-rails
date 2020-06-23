@@ -30,12 +30,25 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-  first_name: "First Name"
-  last_name: "Last Name"
-  phone: "Phone"
-  email: "Email"
-  message: "Message"
-  submit: "Submit"
-  back: "Back"
-  header: "Send us a message"
+  form:
+    header: "Send us a message"
+    submit: "Submit"
+    back: "Back"
+    field_labels:  
+      first_name: "First Name"
+      last_name: "Last Name"
+      phone: "Phone"
+      email: "Email"
+      message: "Message"
+    field_placeholders:
+      first_name: "Alex"
+      last_name: "Stouse"
+      phone: "90263777282"
+      email: "alex.s@gmail.com"
+      message: "Hello, I am interested"
+  notice:
+    success: "Contact was successfully created."
+
+
+
+
