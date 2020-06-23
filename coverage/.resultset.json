@@ -126,18 +126,18 @@
       },
       "/Users/swapnil/Desktop/ROR/contact-form-2/app/jobs/application_job.rb": {
         "lines": [
+          0,
           null,
           null,
           null,
           null,
           null,
-          null,
-          null
+          0
         ],
         "branches": {
         }
       }
     },
-    "timestamp": 1592911685
+    "timestamp": 1592911935
   }
 }
