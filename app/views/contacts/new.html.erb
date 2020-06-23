@@ -1,7 +1,8 @@
 <div class="pull-right">
-  <%= form_tag contacts_path, method: 'GET' do%>
-    <%= select_tag 'locale', options_for_select(@supported_languages.collect{ |u| [u, u] }, I18n.locale), onchange: 'this.form.submit();', style: "width: 50px; height: 50px; text-align: center" %>
-  <%end%>
+  <%= select_tag 'locale',
+    options_for_select(@supported_languages.collect{ |u| [u, u] }, I18n.locale),
+    class: "language_selector"
+  %>
 </div>
 
 <h1> <%= t('form.header') %></h1>
