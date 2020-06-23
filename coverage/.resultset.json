@@ -33,8 +33,8 @@
           null,
           null,
           1,
-          2,
-          2,
+          4,
+          4,
           null,
           null
         ]
@@ -51,9 +51,9 @@
           1,
           null,
           1,
-          2,
-          2,
-          2,
+          4,
+          4,
+          4,
           null,
           null
         ]
@@ -66,82 +66,78 @@
           null
         ]
       },
-      "/Users/swapnil/Desktop/ROR/contact-form-2/app/jobs/application_job.rb": {
+      "/Users/swapnil/Desktop/ROR/contact-form-2/app/controllers/contacts_controller.rb": {
         "lines": [
-          0,
+          1,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null,
+          null,
+          1,
+          3,
+          3,
+          3,
+          4,
+          2,
+          null,
+          2,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
           null,
           null,
           null,
           null,
           null,
-          0
-        ],
-        "branches": {
-        }
+          null,
+          1,
+          3,
+          null,
+          null
+        ]
       },
       "/Users/swapnil/Desktop/ROR/contact-form-2/app/controllers/application_controller.rb": {
         "lines": [
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
           null,
-          0,
-          0,
-          0,
+          1,
+          7,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          null,
+          1,
+          7,
+          7,
+          7,
+          2,
+          null,
+          5,
+          null,
+          null,
+          null
+        ]
       },
-      "/Users/swapnil/Desktop/ROR/contact-form-2/app/controllers/contacts_controller.rb": {
+      "/Users/swapnil/Desktop/ROR/contact-form-2/app/jobs/application_job.rb": {
         "lines": [
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
           null,
           null,
           null,
           null,
           null,
           null,
-          0,
-          0,
-          0,
-          0
+          null
         ],
         "branches": {
         }
       }
     },
-    "timestamp": 1592858721
+    "timestamp": 1592911377
   }
 }
