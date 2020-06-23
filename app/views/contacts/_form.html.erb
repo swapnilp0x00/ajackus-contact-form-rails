@@ -3,7 +3,7 @@
 
 <%# Form %>
 <div class="m-10-per">
-  <%= form_with(model: contact, local: true) do |form| %>
+  <%= form_with(model: contact, url: "/contacts?locale=#{I18n.locale}" ,local: true) do |form| %>
     <% if contact.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
