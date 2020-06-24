@@ -54,52 +54,46 @@ RSpec.describe "Contacts", type: :request do
         end
     end
 
-    context "Post" do
-        it "POST /contacts => Should redirect to /contacts on success" do
-            post "/contacts", params: { contact: { 
+    context "Post /contact Successful submission" do
+        before(:all) do
+            @params = { contact: { 
                 first_name: 'Swapnil',
                 last_name: 'Pardeshi',
                 email: 'swapnilpaaaaa133@gmail.com',
                 message: 'hello i am Swapnil'}
             }
+        end
+        it "POST /contacts => Should redirect to /contacts on success" do
+            post "/contacts", params: @params
             expect(response).to redirect_to(contacts_path)
         end
     
         it "POST /contacts => Should have status code 302" do
-            post "/contacts", params: { contact: { 
-                first_name: 'Swapnil',
-                last_name: 'Pardeshi',
-                email: 'swapnilpaaaaa133@gmail.com',
-                message: 'hello i am Swapnil'}
-            }
+            post "/contacts", params: @params
             expect(response).to have_http_status("302")
         end
     
         it "POST /contacts.json => Should have status code 302" do
-            post "/contacts.json", params: { contact: { 
-                first_name: 'Swapnil',
+            post "/contacts.json", params: @params
+            expect(response).to have_http_status(:created)
+        end
+    end
+
+    context "Post /contact Unsuccssfull submission" do
+        before(:all) do
+            @params = { contact: { 
                 last_name: 'Pardeshi',
                 email: 'swapnilpaaaaa133@gmail.com',
                 message: 'hello i am Swapnil'}
             }
-            expect(response).to have_http_status(:created)
         end
-    
         it "POST /contacts => When data is invalid" do
-            post "/contacts", params: { contact: { 
-                first_name: 'Swapnil',
-                last_name: 'Pardeshi',
-                message: 'hello i am Swapnil'}
-            }
+            post "/contacts", params: @params
             expect(response).to render_template(:new)    
         end
     
         it "POST /contacts.json => When invalid data" do
-            post "/contacts.json", params: { contact: { 
-                first_name: 'Swapnil',
-                last_name: 'Pardeshi',
-                message: 'hello i am Swapnil'}
-            }
+            post "/contacts.json", params: @params
             expect(response).to have_http_status(:unprocessable_entity)    
         end
     end
