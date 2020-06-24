@@ -12,13 +12,18 @@ RSpec.describe "Contacts", type: :request do
             get "/contacts"
             expect(response).to render_template(:new)    
         end
-    
-        it "on /contacts => Should render new Form in English" do
+        
+        it "on /contacts => Should render new Form in Default Locale" do
+            get "/contacts"
+            expect(I18n.locale).to eq(I18n.default_locale)    
+        end
+
+        it "on /contacts?locale=en => Should render new Form in English" do
             get "/contacts?locale=en"
             expect(I18n.locale).to eq(:en)    
         end
     
-        it "on /contacts => Should render new Form in German" do
+        it "on /contacts?locale=de => Should render new Form in German" do
             get "/contacts?locale=de"
             expect(I18n.locale).to eq(:de)    
         end
@@ -32,9 +37,13 @@ RSpec.describe "Contacts", type: :request do
                 get "/contacts"
                 expect(I18n.locale).to eq(I18n.default_locale)
             end
-            it "GET /contacts => Should render new Form in German" do
+            it "GET /contacts?locale=de => Should render new Form in German" do
                 get "/contacts?locale=de"
                 expect(I18n.locale).to eq(:de)    
+            end
+            it "GET /contacts?locale=en => Should render new Form in English" do
+                get "/contacts?locale=en"
+                expect(I18n.locale).to eq(:en)    
             end
         end
 
@@ -42,11 +51,15 @@ RSpec.describe "Contacts", type: :request do
             before(:each) do
                 I18n.locale = :de
             end
-            it "GET /contacts => Should have default locale if query parameter is not given" do
+            it "Should have default locale if query parameter is not given" do
                 get "/contacts"
                 expect(I18n.locale).to eq(I18n.default_locale)
             end
-            it "GET /contacts => Should render new Form in English" do
+            it "GET /contacts?locale=de => Should render new Form in German" do
+                get "/contacts?locale=de"
+                expect(I18n.locale).to eq(:de)    
+            end
+            it "GET /contacts?locale=en Should render new Form in English" do
                 get "/contacts?locale=en"
                 expect(I18n.locale).to eq(:en)    
             end
