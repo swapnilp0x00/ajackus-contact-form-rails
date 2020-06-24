@@ -81,4 +81,24 @@ RSpec.describe Contact, type: :model do
       expect{contact.save}.to change{Contact.count}.by(0)
     end
   end
+
+
+  context "language = English" do
+    before(:each) do
+      I18n.locale = :en
+    end
+
+    it "Value of form.submit is Submit" do
+      expect(I18n.t('form.submit')).to eq('Submit')
+    end
+  end
+
+  context "language = German" do
+    before(:each) do
+      I18n.locale = :de
+    end
+    it "Value of form.submit is Einreichen" do
+      expect(I18n.t('form.submit')).to eq('Einreichen')
+    end
+  end
 end

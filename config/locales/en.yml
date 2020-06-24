@@ -1,4 +1,7 @@
 en:
+  messages:
+    contact_create_success: "Contact was successfully created."
+    contact_create_fail: "Contact creation failed"
   form:
     header: "Send us a message"
     submit: "Submit"
@@ -15,8 +18,6 @@ en:
       phone: "90263777282"
       email: "alex.s@gmail.com"
       message: "Hello, I am interested"
-  notice:
-    success: "Contact was successfully created."
 
 
 
