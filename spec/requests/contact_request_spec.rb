@@ -39,7 +39,7 @@ RSpec.describe "Contacts", type: :request do
         end
     end
 
-    context "GET Requests when locale = en" do
+    context "GET Requests when locale = de" do
         before(:each) do
             I18n.locale = :de
         end
