@@ -86,6 +86,11 @@ RSpec.describe "Contacts", type: :request do
                 post "/contacts", params: @params
                 expect(response).to have_http_status("302")
             end
+
+            it "POST /contacts => Should have flash message" do
+                post "/contacts", params: @params
+                expect(flash[:notice]).to eq(I18n.t('messages.contact_create_success'))
+            end
         
             it "POST /contacts.json => Should have status code 302" do
                 post "/contacts.json", params: @params
