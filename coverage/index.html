@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-06-23T17:02:15+05:30">2020-06-23T17:02:15+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-06-24T19:10:36+05:30">2020-06-24T19:10:36+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.81
+         3.31
        </span>
     </span> hits/line
     )
@@ -77,18 +77,18 @@
             <td class="cell--number">11</td>
             <td class="cell--number">11</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">4.55</td>
+            <td class="cell--number">6.36</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#f165a3a16a27b1ded1f5f53c5a0eeb5a2aefa2b9" class="src_link" title="app/controllers/contacts_controller.rb">app/controllers/contacts_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">32</td>
+            <td class="cell--number">27</td>
             <td class="cell--number">14</td>
             <td class="cell--number">14</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.14</td>
+            <td class="cell--number">3.43</td>
             
           </tr>
         
@@ -188,7 +188,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.76
+         4.72
        </span>
     </span> hits/line
     )
@@ -235,18 +235,18 @@
             <td class="cell--number">11</td>
             <td class="cell--number">11</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">4.55</td>
+            <td class="cell--number">6.36</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#f165a3a16a27b1ded1f5f53c5a0eeb5a2aefa2b9" class="src_link" title="app/controllers/contacts_controller.rb">app/controllers/contacts_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">32</td>
+            <td class="cell--number">27</td>
             <td class="cell--number">14</td>
             <td class="cell--number">14</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.14</td>
+            <td class="cell--number">3.43</td>
             
           </tr>
         
@@ -773,8 +773,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="6">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="13" data-linenumber="6">
+            <span class="hits">13</span>
             
 
             
@@ -817,8 +817,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="10">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="13" data-linenumber="10">
+            <span class="hits">13</span>
             
 
             
@@ -828,8 +828,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="11">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="13" data-linenumber="11">
+            <span class="hits">13</span>
             
 
             
@@ -839,8 +839,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="12">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="13" data-linenumber="12">
+            <span class="hits">13</span>
             
 
             
@@ -850,8 +850,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="13">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="4" data-linenumber="13">
+            <span class="hits">4</span>
             
 
             
@@ -872,8 +872,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="15">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="9" data-linenumber="15">
+            <span class="hits">9</span>
             
 
             
@@ -991,8 +991,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="5">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="8" data-linenumber="5">
+            <span class="hits">8</span>
             
 
             
@@ -1085,7 +1085,7 @@
 
             
 
-            <code class="ruby">        format.html { redirect_to contacts_url, notice: &#39;Contact was successfully created.&#39; }</code>
+            <code class="ruby">        format.html { redirect_to contacts_url, notice: t(&#39;messages.contact_create_success&#39;)  }</code>
           </li>
         </div>
       
@@ -1096,7 +1096,7 @@
 
             
 
-            <code class="ruby">        format.json { render json: @contact, status: :created }</code>
+            <code class="ruby">        format.json { render json: @contact, status: :created, notice: t(&#39;messages.contact_create_success&#39;) }</code>
           </li>
         </div>
       
@@ -1118,7 +1118,7 @@
 
             
 
-            <code class="ruby">        format.html { render :new }</code>
+            <code class="ruby">        format.html { render :new, notice:  t(&#39;messages.contact_create_fail&#39;)}</code>
           </li>
         </div>
       
@@ -1129,7 +1129,7 @@
 
             
 
-            <code class="ruby">        format.json { render json: @contact.errors, status: :unprocessable_entity }</code>
+            <code class="ruby">        format.json { render json: @contact.errors, status: :unprocessable_entity, notice: t(&#39;messages.contact_create_fail&#39;) }</code>
           </li>
         </div>
       
@@ -1195,67 +1195,12 @@
 
             
 
-            <code class="ruby">    # Use callbacks to share common setup or constraints between actions.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="24">
-            
-            
-
-            
-
-            <code class="ruby">    # def set_contact</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="25">
-            
-            
-
-            
-
-            <code class="ruby">    #   @contact = Contact.find(params[:id])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
-            
-
-            <code class="ruby">    # end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
-            
-
             <code class="ruby">    # Only allow a list of trusted parameters through.</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="29">
+          <li class="covered" data-hits="1" data-linenumber="24">
             <span class="hits">1</span>
             
 
@@ -1266,7 +1211,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="30">
+          <li class="covered" data-hits="5" data-linenumber="25">
             <span class="hits">5</span>
             
 
@@ -1277,7 +1222,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
@@ -1288,7 +1233,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
