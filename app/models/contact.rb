@@ -16,7 +16,6 @@ class Contact < ApplicationRecord
 
 
     after_create do
-        puts "***Mailer Code....***"
-        ContactMailer.with(contact: self).new_contact.deliver_now
+        ContactMailer.new_contact(self.id).deliver_now
     end
 end    
