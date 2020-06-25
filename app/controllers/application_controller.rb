@@ -1,10 +1,5 @@
 class ApplicationController < ActionController::Base
-    before_action :set_supported_languages
     before_action :set_locale
-
-    def set_supported_languages
-        @supported_languages = I18n.available_locales
-    end
 
     def set_locale
         query_locale = params[:locale]

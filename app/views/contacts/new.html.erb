@@ -1,5 +1,5 @@
 <div id="language_selector" class="pull-right">
-  <% @supported_languages.each do |code|%>
+  <% I18n.available_locales.each do |code|%>
     <%= link_to code, "/contacts?locale=#{code}", class: code == I18n.locale ? 'active': '' %> |
   <%end%>
 </div>
