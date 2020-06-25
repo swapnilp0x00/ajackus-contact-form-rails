@@ -1,4 +1,21 @@
 en:
+  activerecord:
+    errors:
+      models:
+        contact:
+          attributes:
+            email:
+              blank: "can't be Blank"
+              taken: "already taken "
+              invalid: "is invalid"
+            first_name:
+              blank: "can't be blank"
+            last_name:
+              blank: "can't be blank"
+            message: 
+              blank: "can't be blank"
+              too_short: "is too short"
+
   messages:
     contact_create_success: "Contact was successfully created."
     contact_create_fail: "Contact creation failed"
